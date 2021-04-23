@@ -19,9 +19,25 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 // </copyright>
 
+using IT.Shared.Accounts;
+using IT.Shared.Attachments;
+using System;
+using System.Collections.Generic;
+
 namespace IT.Shared.Ticketing
 {
     public class TicketReply
     {
+        public uint Id { get; }
+
+        public User Author { get; }
+
+        public string Title { get; }
+
+        public string Content { get; }
+
+        public DateTime Timestamp { get; }
+
+        public List<Attachment> Attachments { get; }
     }
 }
