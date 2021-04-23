@@ -20,20 +20,17 @@
 // </copyright>
 
 using IT.Shared.Accounts;
-using System.Collections.Generic;
 
 namespace IT.Shared.Ticketing
 {
-    public class TicketDomain
+    public class TicketActivityNote
     {
         public ulong Id { get; }
 
-        public TicketDomain Parent { get; }
+        public TicketActivity Parent { get; }
 
-        public List<TicketDomain> Children { get; }
+        public string Message { get; }
 
-        public List<User> SMEs { get; }
-
-        public List<Ticket> Tickets { get; }
+        public User Creator { get; }
     }
 }

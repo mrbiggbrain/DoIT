@@ -26,10 +26,13 @@ namespace IT.Shared.Data
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using IT.Shared.Asset;
     using IT.Shared.Clients;
     using IT.Shared.Devices;
     using IT.Shared.Problems;
+    using IT.Shared.Project;
     using IT.Shared.Ticketing;
+    using IT.Shared.Vendor;
 
     /// <summary>
     /// Provides a simple interface for querying tickets and ticket details from a database. 
@@ -41,29 +44,57 @@ namespace IT.Shared.Data
         /// </summary>
         /// <param name="ticketNumber">The ticket number who's requestors you wish to retrieve. </param>
         /// <returns>A List{Contact} containing the tickets requestors.</returns>
-        internal static List<Contact> GetRequestersByTicketNumber(ulong ticketNumber) => throw new NotImplementedException();
+        internal static List<Contact> GetRequestersByTicketNumber(ulong id) => throw new NotImplementedException();
 
-        internal static List<TicketReply> GetRepliesByTicketNumber(ulong ticketNumber)
-        {
-            throw new NotImplementedException();
-        }
+        internal static List<TicketReply> GetRepliesByTicketNumber(ulong id) => throw new NotImplementedException();
 
-        internal static List<Department> GetDepartmentsByTicketNumber(ulong ticketNumber)
-        {
-            throw new NotImplementedException();
-        }
+        internal static List<Department> GetDepartmentsByTicketNumber(ulong id) => throw new NotImplementedException();
 
-        internal static List<TicketDomain> GetDomainsByTicketNumber(ulong id)
-        {
-            throw new NotImplementedException();
-        }
+        internal static List<TicketDomain> GetDomainsByTicketNumber(ulong id) => throw new NotImplementedException();
 
-        internal static List<Problem> GetProblemsByTicketNumber(ulong id)
-        {
-            throw new NotImplementedException();
-        }
+        internal static List<Problem> GetProblemsByTicketNumber(ulong id) => throw new NotImplementedException();
 
         internal static List<Device> GetDevicesByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<TicketTag> GetTagsByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<TicketActivity> GetActivityByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<Tenant> GetTenantsByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<AssetRequest> GetAssetRequestsByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<ServiceCall> GetServiceCallsByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<Site> GetSitesByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<ProjectTask> GetTasksByTicketNumber(ulong id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static List<Project> GetProjectsByTicketNumber(ulong id)
         {
             throw new NotImplementedException();
         }

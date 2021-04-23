@@ -19,21 +19,20 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 // </copyright>
 
-using IT.Shared.Accounts;
+using IT.Shared.Data;
+using System;
 using System.Collections.Generic;
 
 namespace IT.Shared.Ticketing
 {
-    public class TicketDomain
+    public class TicketActivity
     {
         public ulong Id { get; }
 
-        public TicketDomain Parent { get; }
+        public DateTime Timestamp { get; }
 
-        public List<TicketDomain> Children { get; }
+        public TicketActivityType Type { get; }
 
-        public List<User> SMEs { get; }
-
-        public List<Ticket> Tickets { get; }
+        public List<TicketActivityNote> Notes { get; }
     }
 }

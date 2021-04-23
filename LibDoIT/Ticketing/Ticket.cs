@@ -26,10 +26,14 @@ namespace IT.Shared.Ticketing
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using IT.Shared.Accounts;
+    using IT.Shared.Asset;
     using IT.Shared.Clients;
     using IT.Shared.Data;
     using IT.Shared.Devices;
     using IT.Shared.Problems;
+    using IT.Shared.Project;
+    using IT.Shared.Vendor;
 
     /// <summary>
     /// Represents a ticket in the system.
@@ -43,8 +47,6 @@ namespace IT.Shared.Ticketing
 
         public string Title { get; }
 
-        public DateTime OpenDate { get; }
-
         public TicketStatus Status { get; }
 
         public TicketPriority Priority { get; }
@@ -53,58 +55,42 @@ namespace IT.Shared.Ticketing
 
         public TicketType Type { get; }
 
+        public TicketTimeTracker TimeTracker { get; }
+
         /// <summary>
         /// Gets the list of requesters attached to the ticket.
         /// </summary>
-        public List<Contact> Requesters
-        {
-            get
-            {
-                return TicketProvider.GetRequestersByTicketNumber(this.Id);
-            }
-        }
+        public List<Contact> Requesters { get; }
 
         /// <summary>
         /// Gets the list of replies for the ticket. 
         /// </summary>
-        public List<TicketReply> Replies
-        {
-            get
-            {
-                return TicketProvider.GetRepliesByTicketNumber(this.Id);
-            }
-        }
+        public List<TicketReply> Replies { get; }
 
-        public List<Department> Departments
-        {
-            get
-            {
-                return TicketProvider.GetDepartmentsByTicketNumber(this.Id);
-            }
-        }
+        public List<Department> Departments { get; }
 
-        public List<TicketDomain> Domain
-        {
-            get
-            {
-                return TicketProvider.GetDomainsByTicketNumber(this.Id);
-            }
-        }
+        public List<TicketDomain> Domain { get; }
 
-        public List<Problem> Problems
-        {
-            get
-            {
-                return TicketProvider.GetProblemsByTicketNumber(this.Id);
-            }
-        }
+        public List<Problem> Problems { get; }
 
-        public List<Device> Devices
-        {
-            get
-            {
-                return TicketProvider.GetDevicesByTicketNumber(this.Id);
-            }
-        }
+        public List<Device> Devices { get; }
+
+        public List<TicketTag> Tags { get; }
+
+        public List<TicketActivity> Activity { get; }
+
+        public List<Tenant> Tenants { get; }
+
+        public List<AssetRequest> AssetRequests { get; }
+
+        public List<ServiceCall> ServiceCalls { get; }
+
+        public List<Site> Sites { get; }
+
+        public List<ProjectTask> Tasks { get; }
+
+        public List<Project> Projects { get; }
+
+        public List<User> Owners { get; }
     }
 } 
