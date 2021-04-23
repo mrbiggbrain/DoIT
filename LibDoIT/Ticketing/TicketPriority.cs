@@ -36,5 +36,7 @@ namespace IT.Shared.Ticketing
         public string Description { get; }
 
         public List<Ticket> Tickets { get; }
+
+        public 
     }
 }
