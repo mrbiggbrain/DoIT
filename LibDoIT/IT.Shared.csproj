@@ -1,9 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>IT.Shared</RootNamespace>
     <AssemblyName>Shared</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildTools.FxCop" Version="1.0.1" />
+    <PackageReference Include="StyleCop.MSBuild" Version="6.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
