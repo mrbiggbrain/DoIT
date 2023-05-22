@@ -7,6 +7,7 @@ import {config} from "./config/config";
 import Logging from "./library/logging";
 import ticketRoutes from "./routes/tickets.routes"
 import noteRoutes from "./routes/notes.routes"
+import authenticationRoutes from "./routes/authentication.routes"
 
 // ------------------------------
 // Create Express Instance
@@ -62,6 +63,7 @@ const StartServer = () => {
     /* Routes */
     app.use("/tickets", ticketRoutes);
     app.use("/notes", noteRoutes);
+    app.use("/auth/", authenticationRoutes);
 
     /* Health Check */
     app.get('/ping', (req, res, next) => res.status(200).json({ hello: 'world' }));
