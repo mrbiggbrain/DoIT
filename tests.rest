@@ -1,0 +1,10 @@
+### Add a Ticket
+POST http://127.0.0.1:3000/Tickets
+Content-Type: application/json
+
+{
+    "Subject":"TEST"
+}
+
+### Get a Listing of all tickets
+GET http://127.0.0.1:3000/Tickets

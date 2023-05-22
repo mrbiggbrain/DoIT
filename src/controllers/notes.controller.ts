@@ -62,7 +62,7 @@ const DeleteNote = (req: Request, res: Response, next: NextFunction) => {
         .then((note) => {
             if(note)
             {
-                const ticketnotes = Note.deleteMany({note: noteId})
+                const ticketnotes = TicketNote.deleteMany({note: noteId})
                     .then((tickets) => {
                         res.status(201).json({message: 'deleted'})
                     })
